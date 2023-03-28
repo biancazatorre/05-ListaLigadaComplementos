@@ -124,6 +124,7 @@ void inserirElemento()
 	cout << "Digite o elemento: ";
 	cin >> novo->valor;
 	novo->prox = NULL;
+	
 
 	if (primeiro == NULL)
 	{
@@ -134,6 +135,10 @@ void inserirElemento()
 		// procura o final da lista
 		NO* aux = primeiro;
 		while (aux->prox != NULL) {
+			if (aux->valor > novo) {
+
+				break;
+			}
 			aux = aux->prox;
 		}
 		aux->prox = novo;
